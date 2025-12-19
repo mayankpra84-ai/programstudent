@@ -102,24 +102,3 @@ Stores administrator account details.
 
 ---
 
-🖼️ ER Diagram (Text Representation)
-
-+-------------+        1       N        +---------------+
-|   USERS     |------------------------|   ATTENDANCE  |
-+-------------+                         +---------------+
-| rollno (PK) |                         | rollno (FK)   |
-| name        |                         | name          |
-| email       |                         | date          |
-| password    |                         +---------------+
-| date        |
-+-------------+
-
-+-------------+
-|   ADMINS    |
-+-------------+
-| username PK |
-| password    |
-| email       |
-+-------------+
-
-
