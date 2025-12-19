@@ -149,17 +149,3 @@ Student receives confirmation email.
 * Schedule & Threading (Automated Background Tasks)
 
 ---
-
-## 📂 Project Structure
-
-
-attendance-system/
-│
-├── app.py                  # Main Flask application
-├── dataset/                # Collected face images (RollNo wise folders)
-├── lbph_trained.yml        # Trained face recognition model
-├── labels.pkl              # Label to RollNo mapping
-├── templates/              # (Optional if using separate HTML files)
-├── static/                 # CSS / JS files (if separated)
-└── README.md               # Project documentation
-
