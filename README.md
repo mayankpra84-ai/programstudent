@@ -132,19 +132,6 @@ If face is recognized for 7 seconds, attendance is marked.
 
 Student receives confirmation email.
 
-# saurabh singh kushwah
-
-⚙️ Installation & Setup (Enhanced)
-
-This section explains how to set up the Face Recognition Based Attendance System on a local machine for development and testing.
-
-1️⃣ Clone the Repository
-
-Clone the project source code from GitHub and navigate to the project directory:
-
-git clone https://github.com/your-username/attendance-system.git
-cd attendance-system
-
 # Ritika
 
 <<<<<<< HEAD
@@ -162,7 +149,6 @@ cd attendance-system
 * Schedule & Threading (Automated Background Tasks)
 
 ---
-# saurabh singh kushwah 
 
 ## 📂 Project Structure
 
@@ -175,8 +161,21 @@ attendance-system
 - static/               (CSS and JavaScript files)
 - README.md             (Project documentation)
 
----
-=======
+-----
+
+# Saurabh singh kushwah
+
+⚙️ Installation & Setup (Enhanced)
+
+This section explains how to set up the Face Recognition Based Attendance System on a local machine for development and testing.
+
+1️⃣ Clone the Repository
+
+Clone the project source code from GitHub and navigate to the project directory:
+
+git clone https://github.com/your-username/attendance-system.git
+cd attendance-system
+
 Note: Ensure Git is installed on your system.
 Verify using: git --version
 
