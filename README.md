@@ -132,9 +132,22 @@ If face is recognized for 7 seconds, attendance is marked.
 
 Student receives confirmation email.
 
+# saurabh singh kushwah
+
+⚙️ Installation & Setup (Enhanced)
+
+This section explains how to set up the Face Recognition Based Attendance System on a local machine for development and testing.
+
+1️⃣ Clone the Repository
+
+Clone the project source code from GitHub and navigate to the project directory:
+
+git clone https://github.com/your-username/attendance-system.git
+cd attendance-system
 
 # Ritika
 
+<<<<<<< HEAD
 ## 🛠 Technolgies Used
 
 * Python
@@ -149,6 +162,7 @@ Student receives confirmation email.
 * Schedule & Threading (Automated Background Tasks)
 
 ---
+# saurabh singh kushwah 
 
 ## 📂 Project Structure
 
@@ -162,3 +176,163 @@ attendance-system
 - README.md             (Project documentation)
 
 ---
+=======
+Note: Ensure Git is installed on your system.
+Verify using: git --version
+
+2️⃣ Create a Virtual Environment (Recommended)
+
+Using a virtual environment prevents dependency conflicts and ensures a clean setup.
+
+python -m venv venv
+
+
+Activate the virtual environment:
+
+Windows
+
+venv\Scripts\activate
+
+
+Linux / macOS
+
+source venv/bin/activate
+
+
+Skipping this step won’t break the project, but it’s bad practice.
+
+3️⃣ Install Required Python Packages
+
+Install all dependencies using pip:
+
+pip install flask opencv-python opencv-contrib-python mysql-connector-python numpy schedule
+
+
+Verify successful installation:
+
+python -c "import cv2, flask, mysql.connector, numpy"
+
+
+If no errors appear, dependencies are correctly installed.
+
+4️⃣ Setup MySQL Database
+Create Database
+
+Login to MySQL and create the database:
+
+CREATE DATABASE online_attendance;
+USE online_attendance;
+
+Create Required Tables
+CREATE TABLE users (
+    rollno INT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(200),
+    password VARCHAR(100),
+    date DATE
+);
+
+CREATE TABLE atten (
+    rollno INT,
+    name VARCHAR(100),
+    date DATE
+);
+
+CREATE TABLE admins (
+    username VARCHAR(100) PRIMARY KEY,
+    password VARCHAR(100),
+    email VARCHAR(200)
+);
+
+
+⚠️ Foreign keys and password hashing are intentionally omitted to keep the system simple for academic use.
+
+5️⃣ Configure Database Credentials
+
+Open app.py and update the MySQL connection details:
+
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="1234",
+    database="online_attendance"
+)
+
+
+Ensure:
+
+MySQL service is running
+
+Credentials are correct
+
+Port 3306 is open (default)
+
+6️⃣ Configure Email (SMTP – Gmail)
+
+The system uses Gmail SMTP to send attendance confirmation emails.
+
+Steps to Enable Email Notifications
+
+Enable 2-Step Verification in your Gmail account
+
+Generate an App Password
+
+Use the generated password in the email configuration function
+
+Example:
+
+EMAIL_ADDRESS = "your_email@gmail.com"
+EMAIL_PASSWORD = "your_app_password"
+
+
+❗ Never hard-code real passwords in public repositories.
+
+7️⃣ Dataset Directory Structure
+
+Ensure the dataset folder exists:
+
+dataset/
+├── 101/
+│   ├── img1.jpg
+│   ├── img2.jpg
+├── 102/
+
+
+Each folder represents a student roll number.
+
+▶️ Running the Application
+Start the Flask Server
+
+Run the application using:
+
+python app.py
+
+
+If everything is configured correctly, you should see:
+
+Running on http://127.0.0.1:5000/
+
+Access the Web Application
+
+Open a browser and navigate to:
+
+http://127.0.0.1:5000/
+
+✅ Post-Setup Checklist
+
+Before using the system, confirm:
+
+✔ Camera is connected and accessible
+✔ MySQL server is running
+✔ Dataset folders exist
+✔ LBPH model is trained
+✔ Email credentials are valid
+s
+⚠️ Common Issues & Fixes
+Issue	Cause	Solution
+Camera not opening	Webcam busy	Close other camera apps
+Email not sent	App password incorrect	Regenerate Gmail App Password
+Face not recognized	Poor dataset	Capture clearer images
+Database error	Wrong credentials	Recheck MySQL config
+
+>>>>>>> 0e77b90 (saurabh modifyREADME)
