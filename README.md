@@ -39,6 +39,87 @@ Helps students stay informed and provides instant confirmation of attendance
 
 👥 Role-Based Access Control (Admin / Faculty / Student)
 
-☁️ Cloud Deployment for scalability and remote access
-
+☁️ Cloud Deployment for scalability and remote acc
 🎨 Enhanced User Interface for better usability and experience
+
+# kashish
+
+ 
+## 🗄️ Database Schema
+
+The database is designed to manage **users**, **attendance records**, and **admin accounts**.  
+It ensures data integrity and prevents duplicate attendance entries for the same user on the same day.
+
+---
+
+### 👤 Users Table (`users`)
+
+Stores user registration and authentication details.
+
+| Column Name | Data Type     | Key | Description                    |
+|------------|--------------|-----|--------------------------------|
+| rollno     | INT          | PK  | Unique roll number of the user |
+| name       | VARCHAR(100) | —   | Full name of the user          |
+| email      | VARCHAR(200) | —   | User email address             |
+| password   | VARCHAR(100) | —   | User login password            |
+| date       | DATE         | —   | User registration date         |
+
+---
+
+### 📅 Attendance Table (`atten`)
+
+Stores daily attendance records of users.
+
+| Column Name | Data Type     | Key | Description                              |
+|------------|--------------|-----|------------------------------------------|
+| rollno     | INT          | FK  | References `users.rollno`                |
+| name       | VARCHAR(100) | —   | Name of the user                         |
+| date       | DATE         | —   | Attendance date                           |
+
+**Constraint:**  
+- Each user can mark attendance **only once per day**  
+- Attendance entries are **unique for (`rollno`, `date`)**
+
+---
+
+### 🔐 Admins Table (`admins`)
+
+Stores administrator account details.
+
+| Column Name | Data Type     | Key | Description                    |
+|------------|--------------|-----|--------------------------------|
+| username   | VARCHAR(100) | PK  | Unique admin username          |
+| password   | VARCHAR(100) | —   | Admin login password           |
+| email      | VARCHAR(200) | —   | Admin email address            |
+
+---
+
+### 🔗 Schema Relationships
+
+- `atten.rollno` → `users.rollno`  
+- A user can have **multiple attendance records on different dates**  
+- **Duplicate attendance on the same date is not allowed**
+
+---
+
+🖼️ ER Diagram (Text Representation)
+
++-------------+        1       N        +---------------+
+|   USERS     |------------------------|   ATTENDANCE  |
++-------------+                         +---------------+
+| rollno (PK) |                         | rollno (FK)   |
+| name        |                         | name          |
+| email       |                         | date          |
+| password    |                         +---------------+
+| date        |
++-------------+
+
++-------------+
+|   ADMINS    |
++-------------+
+| username PK |
+| password    |
+| email       |
++-------------+
+
+
