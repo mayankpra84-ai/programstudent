@@ -101,4 +101,64 @@ Stores administrator account details.
 - **Duplicate attendance on the same date is not allowed**
 
 ---
+#  Kashish & Tanishka
+
+🧠 Attendance System - Working Flow
+Step-by-Step Flow
+
+🧑‍🎓 Student Registration & Dataset Collection
+
+Student signs up.
+
+Face dataset is captured for training.
+
+🖥️ Model Training (Admin)
+
+Admin trains the face recognition model using collected datasets.
+
+📸 Camera Initialization (Admin)
+
+Admin starts the camera for live recognition.
+
+🔍 Face Detection & Recognition
+
+System detects and recognizes faces in real-time.
+
+⏱️ Attendance Marking
+
+If face is recognized for 7 seconds, attendance is marked.
+
+📧 Email Confirmation
+
+Student receives confirmation email.
+
+🌳 Flowchart Diagram (Emoji/Block Style)
+🧑‍🎓 1. Student Registration
+    & Dataset Collection
+           │
+           ▼
+🖥️ 2. Admin Trains Face Model
+           │
+           ▼
+📸 3. Admin Starts Camera
+           │
+           ▼
+🔍 4. Face Detection & Recognition
+           │
+   ┌───────┴────────┐
+   ▼                ▼
+✅ Face Recognized   ❌ Face Not Detected
+   │                │
+   ▼                │
+⏱️ 5. Wait 7 Seconds │
+   │                │
+   ▼                │
+📌 6. Mark Attendance│
+   │                │
+   ▼                │
+📧 7. Send Email Confirmation
+   │
+   ▼
+ 🔄 Loop Back for Detection
+
 
