@@ -132,33 +132,5 @@ If face is recognized for 7 seconds, attendance is marked.
 
 Student receives confirmation email.
 
-### 🌳 Flowchart Diagram (Emoji/Block Style)
-🧑‍🎓 1. Student Registration
-    & Dataset Collection
-           │
-           ▼
-🖥️ 2. Admin Trains Face Model
-           │
-           ▼
-📸 3. Admin Starts Camera
-           │
-           ▼
-🔍 4. Face Detection & Recognition
-           │
-   ┌───────┴────────┐
-   ▼                ▼
-✅ Face Recognized   ❌ Face Not Detected
-   │                │
-   ▼                │
-⏱️ 5. Wait 7 Seconds │
-   │                │
-   ▼                │
-📌 6. Mark Attendance│
-   │                │
-   ▼                │
-📧 7. Send Email Confirmation
-   │
-   ▼
- 🔄 Loop Back for Detection
 
 
