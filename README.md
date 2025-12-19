@@ -15,7 +15,7 @@ A key enhancement in this system is the Low Attendance Email Alert Feature. The 
 
 Administrators can configure the attendance threshold, schedule automatic checks, and view sent alerts within the admin dashboard. Overall, this project integrates computer vision for real-time recognition, backend logic for attendance management, and automated communication to improve student accountability, making it a comprehensive attendance solution for educational institutions.
 
-#Jahnavi 
+# Jahnavi 
 
 🤖 Face Recognition Module
 
