@@ -135,7 +135,7 @@ Student receives confirmation email.
 
 # Ritika
 
-## 🛠 Technolgies Uused
+## 🛠 Technolgies Used
 
 * Python
 * Flask (Web Framework)
@@ -153,12 +153,12 @@ Student receives confirmation email.
 ## 📂 Project Structure
 
 attendance-system
-- app.py                (Main Flask application)
-- dataset/              (Collected face images)
-- lbph_trained.yml      (Trained face recognition model)
-- labels.pkl            (Label to RollNo mapping)
-- templates/            (HTML files)
-- static/               (CSS and JavaScript files)
-- README.md             (Project documentation)
+- app.py                # (Main Flask application)
+- dataset/              # (Collected face images)
+- lbph_trained.yml      # (Trained face recognition model)
+- labels.pkl            # (Label to RollNo mapping)
+- templates/            # (HTML files)
+- static/               # (CSS and JavaScript files)
+- README.md             # (Project documentation)
 
 ---
