@@ -132,7 +132,7 @@ If face is recognized for 7 seconds, attendance is marked.
 
 Student receives confirmation email.
 
-🌳 Flowchart Diagram (Emoji/Block Style)
+### 🌳 Flowchart Diagram (Emoji/Block Style)
 🧑‍🎓 1. Student Registration
     & Dataset Collection
            │
